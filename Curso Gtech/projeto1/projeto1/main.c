@@ -27,13 +27,37 @@ int main()
     // ---------------------- aula 4
 
     int valor1, valor2, resultado;
-    printf("Digite um valor: \n");
-    scanf("%d",&valor1);
-    printf("Digite o segundo valor: \n");
-    scanf("%d",&valor2);
-    resultado = valor1 + valor2;
-    printf("A soma eh: %d", resultado);
+    char operador;
 
+    printf("Digite um valor: ");
+    scanf("%d",&valor1);
+    setbuf(stdin, NULL); // operacao para limpar o buffer do teclado
+
+    printf("Digite o segundo valor: ");
+    scanf("%d",&valor2);
+    setbuf(stdin, NULL); // operacao para limpar o buffer do teclado
+
+    printf("digite a operacao( +, -, * ou /): ");
+    scanf("%c", &operador);
+    setbuf(stdin, NULL); // operacao para limpar o buffer do teclado
+
+    if(operador == '+'){
+        resultado = valor1 + valor2;
+    }
+    else if(operador == '-'){
+        resultado = valor1 - valor2;
+    }
+    else if(operador == '/'){
+        resultado = valor1 / valor2;
+    }
+    else if(operador == '*'){
+        resultado = valor1 * valor2;
+    }
+    else{
+        printf("Operador invalido!");
+    }
+
+    printf("O resultado da operação é: %d", resultado);
 
     return 0;
 }
