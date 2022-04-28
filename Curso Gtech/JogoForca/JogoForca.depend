@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1651182520 source:c:\users\kassio\cmaismais\curso gtech\jogoforca\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+
